@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>抽屉式滑动侧边栏菜单</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<script src='js/prefixfree.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<ul class="drawer">
+	  <li>
+	    <a href="#">
+	      <i class="fa fa-info-circle"></i>
+	      <span>Info</span>
+	    </a>
+	    <ul>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-folder-open"></i>
+	          <span>Portfolio</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-question-circle"></i>
+	          <span>About</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-phone-square"></i>
+	          <span>Contact</span>
+	        </a>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    <a href="#">
+	      <i class="fa fa-folder"></i>
+	      <span>Projects</span>
+	    </a>
+	    <ul>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-flash"></i>
+	          <span>Hover.css</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-ellipsis-h"></i>
+	          <span>Sequence.js</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-dot-circle-o"></i>
+	          <span>jQuery Parallax</span>
+	        </a>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    <a href="#">
+	      <i class="fa fa-share-alt"></i>
+	      <span>Social</span>
+	    </a>
+	    <ul>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-codepen"></i>
+	          <span>CodePen</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-twitter"></i>
+	          <span>Twitter</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-github"></i>
+	          <span>GitHub</span>
+	        </a>
+	      </li>
+	      <li>
+	        <a href="#" target="_blank">
+	          <i class="fa fa-globe"></i>
+	          <span>Web</span>
+	        </a>
+	      </li>
+	    </ul>
+	  </li>
+	</ul>
+	<div class="htmleaf-container">
+		<div class="related"></div>
+	</div>
+	
+	<div>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+	<p style="width:300px;height:300px;background-color:#666">small</p>
+		<img  id="back-to-top" class="back-to-top" src="images/back.png" alt="back" style="width:60px; height:100px; float:right; margin-right:100px;" class="img-rounded">
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+  var $backToTop = $(".back-to-top");
+  /* 隐藏回顶部按钮 */
+  $backToTop.hide();
+ 
+  $(window).on('scroll', function() {
+   if ($(this).scrollTop() > 100) { /* 返回顶部按钮将在用户向下滚动100像素后出现 */
+   $backToTop.fadeIn();
+   } else {
+   $backToTop.fadeOut();
+   }
+  });
+ 
+  $backToTop.on('click', function(e) {
+   $("html, body").animate({scrollTop: 0}, 500);
+  });
+})
+	</script>
+	
+</body>
+</html>

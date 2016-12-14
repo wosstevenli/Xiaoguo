@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>旋转环状菜单</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<link rel='stylesheet prefetch' href='css/animate.min.css'>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<div id='ss_menu'>
+		  <div>
+		    <i class="fa fa-qq"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-weibo"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-weixin"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-renren"></i>
+		  </div>
+		  <div class='menu'>
+		    <div class='share' id='ss_toggle' data-rot='180'>
+		      <div class='circle'></div>
+		      <div class='bar'></div>
+		    </div>
+		  </div>
+		</div>
+		<div class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="#">
+			  <img src="related/1.jpg" width="300" alt="适合移动手机使用的js环形菜单特效插件"/>
+			  <h3>适合移动手机使用的js环形菜单特效插件</h3>
+			</a>
+			<a href="#">
+			  <img src="related/2.jpg" width="300" alt="jQuery移动优先的炫酷环形气泡菜单特效"/>
+			  <h3>jQuery移动优先的炫酷环形气泡菜单特效</h3>
+			</a>
+		</div>
+	</div>
+	
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>')</script>
+	<script>
+	$(document).ready(function (ev) {
+	    var toggle = $('#ss_toggle');
+	    var menu = $('#ss_menu');
+	    var rot;
+	    $('#ss_toggle').on('click', function (ev) {
+	        rot = parseInt($(this).data('rot')) - 180;
+	        menu.css('transform', 'rotate(' + rot + 'deg)');
+	        menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
+	        if (rot / 180 % 2 == 0) {
+	            toggle.parent().addClass('ss_active');
+	            toggle.addClass('close');
+	        } else {
+	            toggle.parent().removeClass('ss_active');
+	            toggle.removeClass('close');
+	        }
+	        $(this).data('rot', rot);
+	    });
+	    menu.on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+	        if (rot / 180 % 2 == 0) {
+	            $('#ss_menu div i').addClass('ss_animate');
+	        } else {
+	            $('#ss_menu div i').removeClass('ss_animate');
+	        }
+	    });
+	});
+	</script>
+</body>
+</html>
