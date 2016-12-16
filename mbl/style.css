@@ -1,0 +1,14 @@
+.blur{
+-webkit-filter: blur(70px);
+-moz-filter: blur(30px);
+-ms-filter: blur(30px);
+filter: blur(70px);
+filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=30, MakeShadow=false)
+}
+.jianbian{
+  width: 450px;
+  height: auto;
+  margin-left: auto;
+  box-shadow: 0 0 0 5px;
+  border-radius: 5px;
+}
