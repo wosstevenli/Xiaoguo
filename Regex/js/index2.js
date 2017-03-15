@@ -69,6 +69,24 @@
         }  
         return false;  
     }  
+
+    /*  
+        座机号码验证  
+    */  
+    function telphoneBtn(){  
+        var telphone=document.getElementById("telphone").value;  
+        var telphoneReg=/^[0-9-()（）]{7,18}$/;  
+        //alert(mobileReg.test(mobile));  
+        var telphoneText=document.getElementById("telphoneText");  
+        if(telphoneReg.test(telphone)){  
+            telphoneText.innerHTML="输入正确!";  
+            return true;  
+        }else{  
+            telphoneText.innerHTML="输入不正确!请正确输入区号和电话号码";  
+        }  
+        return false;  
+    }  
+
     /*  
         出生日期验证  
     */  
