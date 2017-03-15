@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <script src="js/index2.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>  
+        <div class="logina-logo" style="height: 55px">
+            <a href="">
+                <img src="images/logo.png" height="40" alt="不败传说">
+            </a>
+        </div>
+
+        <div class="logina-main main clearfix">
+            <div class="tab-con">
+                <form id="form-login" method="post" action="passport/ajax-login">
+                    <div id='login-error' class="error-tip"></div>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <th>用户名</th>
+                                <td width="245">
+                                    <input id="user" type="text" name="user" placeholder="用户名" onblur="userBtn()" value=""></td>
+                                <td>
+                                <p id="userText"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>密码</th>
+                                <td width="245">
+                                    <input id="pwd" type="password" name="pwd" placeholder="请输入密码" onblur="pwdBtn()">
+                                </td>
+                                <td>
+                                <p id="pwdText"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>确认密码</th>
+                                <td width="245">
+                                    <input id="password2" type="password" name="password2" placeholder="请确认密码">
+                                </td>
+                                <td>
+                                <p id="password2Text"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>固定电话</th>
+                                <td width="245">
+                                    <input id="telphone" type="text" name="telphone" placeholder="固定电话">
+                                </td>
+                                <td>
+                                <p id="telphoneText"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>手机号码</th>
+                                <td width="245">
+                                    <input id="mobile" type="text" name="mobile" placeholder="手机号码">
+                                </td>
+                                <td>
+                                <p id="mobileText"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>电子邮箱</th>
+                                <td width="245">
+                                    <input id="email" type="email" name="email" placeholder="请邮箱地址">
+                                </td>
+                                <td>
+                                <p id="emailText"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>身份证</th>
+                                <td width="245">
+                                    <input id="sfz" type="text" name="sfz" placeholder="请输入身份证">
+                                </td>
+                                <td>
+                                <p id="sfzText"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th></th>
+                                <td width="245"><input class="confirm" type="submit" value="登  录"></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
