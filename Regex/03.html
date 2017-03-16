@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json & ajax 应用案例</title>
+    <script src="js/jsonajax.js"></script>
+    <link rel="stylesheet" href="css/03.css">
+</head>
+<body>
+    <div> 
+        <div> 
+        <br /> 
+        <input id="first" type="button" value=" << " />
+        <input id="previous" type="button"value=" < " />
+        <input id="next" type="button" value=" > " />
+        <input id="last" type="button"value=" >> " /> 
+        <span id="pageinfo"></span> 
+            <ul id="datas"> 
+                <li id="template"> 
+                    <span id="OrderID">订单ID</span>/ 
+                    <span id="CustomerID">客户ID</span> 
+                    <span id="EmployeeID">雇员ID</span>/ 
+                    <span id="OrderDate">订购日期</span>/ 
+                    <span id="ShippedDate">发货日期</span>/ 
+                    <span id="ShippedName">货主名称</span>/ 
+                    <span id="ShippedAddress">货主地址</span>/ 
+                    <span id="ShippedCity">货主城市</span>/ 
+                    <span id="more">更多信息</span> 
+                </li> 
+            </ul> 
+        </div>
+        <div id="load" style="left: 0px; position: absolute; top: 0px; background-color: red">
+            LOADING....
+        </div> 
+        <input type="hidden" id="pagecount" /> 
+    </div> 
+</body>
+</html>
