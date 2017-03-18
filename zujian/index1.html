@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 gb" id="part">
+            <p>关闭窗口</p>
+            <div id="gb_btn"><a onclick="guanbi()">×</a></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 gb" id="part1">
+            <p>part1</p>
+            <div id="gb_btn"><a onclick="guanbi()">×</a></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 gb" id="part2">
+            <p>part2</p>
+            <div id="gb_btn"><a onclick="guanbi2()">×</a></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 gb" id="part3">
+            <p>part3</p>
+            <div id="gb_btn"><a onclick="guanbi()">×</a></div>
+        </div>
+
+    </div>
+
+    <!--<div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 egjson">
+            <p>
+                Name: <span id="jname"></span><br />
+                Age: <span id="jage"></span><br />
+                Address: <span id="jstreet"></span><br />
+                Phone: <span id="jphone"></span><br />
+            </p>
+        </div>
+    </div>-->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 egjson">
+            <p>
+                Fname: <span id="fname"></span><br />
+                Lname: <span id="lname"></span><br />
+            </p>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    function guanbi(){
+        document.getElementById("part").style.display="none";
+    }
+
+    function guanbi2(){
+        document.getElementById("part2").style.display="none";
+    }
+
+    /*var JSONObject= {
+        "name":"Bill Gates",
+        "street":"Fifth Avenue New York 666",
+        "age":56,
+        "phone":"555 1234567"};
+    document.getElementById("jname").innerHTML=JSONObject.name
+    document.getElementById("jage").innerHTML=JSONObject.age
+    document.getElementById("jstreet").innerHTML=JSONObject.street
+    document.getElementById("jphone").innerHTML=JSONObject.phone*/
+
+    var txt = '{"employees":[' +
+            '{"firstName":"Bill","lastName":"Gates" },' +
+            '{"firstName":"George","lastName":"Bush" },' +
+            '{"firstName":"Thomas","lastName":"Carter" }]}';
+
+    var obj = eval ("(" + txt + ")");
+
+    document.getElementById("fname").innerHTML=obj.employees[1].firstName;
+    document.getElementById("lname").innerHTML=obj.employees[1].lastName;
+
+</script>
+</body>
+</html>

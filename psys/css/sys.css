@@ -1,0 +1,340 @@
+@charset "utf-8";
+/* CSS Document */
+.Top {
+width: 1000px;
+margin: 0 auto 15px;
+padding: 0 10px;
+}
+.Top .Logo {
+padding-top: 13px;
+float: left;
+display: inline;
+}
+.Top .Add {
+width: 57px;
+height: 23px;
+line-height: 23px;
+padding-left: 21px;
+margin-left: 20px;
+text-align: left;
+display: block;
+float: right;
+background: url(../images/top_add_bg.gif) no-repeat left top;
+color: #fff!important;
+}
+.pdr10 {
+padding-right: 10px;
+}
+.float_r {
+float: right;
+display: inline;
+}
+.Text_r {
+text-align: right;
+}
+.Menu {
+height: 39px;
+float: right;
+display: inline;
+}
+.Menu a {
+display: inline-block;
+height: 16px;
+margin: 23px 0 0 50px;
+font: 600 14px/16px "微软雅黑","宋体";
+color: #666!important;
+}
+.clearboth {
+clear: both;
+font-size: 0px;
+line-height: 0px;
+height: 0px;
+border: 0px;
+position: relative;
+overflow: hidden;
+}
+.qrCode {
+position: fixed;
+left: 20px;
+top: 50%;
+width: 100px;
+margin-top: -147px;
+z-index: 9999;
+}
+.qrCode dl {
+margin-bottom: 20px;
+color: #EB9A0A;
+}
+.Content {
+width: 1000px;
+margin: 0 auto;
+min-height: 760px;
+_height: 760px;
+padding-bottom: 40px;
+}
+#Banner {
+width: 1000px;
+height: 350px;
+margin: 0 auto 20px auto;
+position: relative;
+overflow: hidden;
+}
+#PicCont {
+width: 1000px;
+height: 350px;
+position: relative;
+overflow: hidden;
+}
+#PicCont .Pic {
+width: 1000px;
+height: 350px;
+position: absolute;
+top: 0px;
+left: 0px;
+display: none;
+}
+.IndexDiv1 {
+width: 100%;
+margin-bottom: 25px;
+}
+.IndexDiv1 .Left, .IndexDiv1 .Center {
+width: 324px;
+float: left;
+display: inline;
+}
+.Title {
+/*width: 294px;*/
+height: 33px;
+padding: 0 15px;
+margin-bottom: 10px;
+/*background: url(../images/title1_bg.gif) no-repeat left top;*/
+font: 600 15px/30px "微软雅黑","宋体";
+color: #111!important;
+}
+.Title2 {
+width: 633px;
+background: url(../images/title2_bg.gif) no-repeat left top;
+}
+.Title a {
+background: url(../images/blue_arrow.gif) no-repeat left center;
+color: #00a0e9!important;
+float: right;
+display: inline;
+font: 8px/30px Arial;
+padding-left: 9px;
+-webkit-text-size-adjust: none;
+}
+.Title span {
+font: 14px/30px Arial;
+color: #d1d1d1!important;
+margin-left: 10px;
+}
+.pdlr15 {
+padding: 0 15px;
+}
+.pdr15 {
+padding-right: 15px;
+}
+.pdr20 {
+padding-right: 20px;
+}
+.pdl10 {
+padding-left: 10px;
+}
+.div100 {
+width: 100%;
+}
+.mb5 {
+margin-bottom: 5px;
+}
+.mb10 {
+margin-bottom: 10px;
+}
+.mb15 {
+margin-bottom: 15px;
+}
+.mb20 {
+margin-bottom: 20px;
+}
+.mb25 {
+margin-bottom: 25px;
+}
+user agent stylesheettbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+table tr td {
+vertical-align: top;
+}
+.Em2 {
+text-indent: 2em;
+}
+.Gray, a.Gray {
+color: #888 !important;
+}
+.IndexDiv1 .Right {
+width: 324px;
+float: right;
+display: inline;
+}
+.IndexDiv2 {
+}
+.IndexDiv2 .Left {
+width: 663px;
+float: left;
+display: inline;
+}
+.IndexDiv2 .Right {
+width: 324px;
+float: right;
+display: inline;
+}
+.ProductItem {
+width: 142px;
+margin: 0 11px;
+float: left;
+display: inline;
+}
+.ProductItem .ProductTitle {
+margin-top: -27px;
+}
+.ProductItem .ProductTitle .PngBg {
+height: 27px;
+background: url(../images/product_bg.png) no-repeat left top;
+filter: alpha(opacity=65);
+-moz-opacity: 0.65;
+opacity: 0.65;
+}
+.ProductItem .ProductTitle a {
+display: block;
+text-align: center;
+color: #fff!important;
+display: block;
+height: 27px;
+line-height: 27px;
+margin-top: -27px;
+z-index: 100;
+position: relative;
+}
+.B {
+font-weight: bold;
+}
+.Blue, a.Blue {
+color: #00a0e9 !important;
+}
+.ContactItem {
+background: url(../images/h_line.gif) repeat-x left bottom;
+padding: 5px 0 6px 0;
+height: 17px;
+line-height: 17px;
+}
+.Footer {
+height: 75px;
+padding-top: 25px;
+background: url(../images/footer_bg.gif) no-repeat center top;
+}
+.Footer .ZiFooter {
+width: 1000px;
+margin: 0 auto;
+text-align: center;
+}
+user agent stylesheetform {
+display: block;
+margin-top: 0em;
+}
+body {
+font-size: 12px;
+color: #666;
+font-family: Arial;
+line-height: 200%;
+/*background: url(../images/body_bg.gif) repeat-y center top;*/
+}
+dl {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+a:link {
+color: #666;
+text-decoration: none;
+behavior: url(/script/blur.htc);
+}
+a:visited {
+color: #666;
+text-decoration: none;
+}
+/*左侧导航*/
+.LeftSide {  
+width: 202px;
+float: left;
+display: inline;
+}
+.LeftSide .Title {
+height: 40px;
+background: url(../images/title_bg.gif) no-repeat left top;
+font: 16px/35px "微软雅黑","宋体";
+text-align: center;
+/*color: #fff!important;*/
+color:#FFF!important;
+}
+.LeftSide .Item {
+height: 33px;
+background: url(../images/item_ot_bg.gif) no-repeat left top;
+font: 14px/30px "微软雅黑","宋体";
+margin-bottom: 2px;
+padding-left: 57px;
+}
+.Item a.cur {
+background: url(../images/blue_arr.gif) no-repeat left center;
+color: #00a0e9!important;
+}
+.LeftSide .Item a {
+padding-left: 14px;
+color: #777!important;
+}
+.DashedLine {
+height: 1px;
+line-height: 1px;
+position: relative;
+font-size: 0;
+background: url(../images/h_line.gif) repeat-x left top;
+}
+/*右侧内容*/
+.Content .RightSide {
+font-family: '宋体';
+}
+.RightSide {
+width: 770px;
+float: right;
+display: inline;
+}
+table tr td {
+vertical-align: top;
+}
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+table {
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+.RightSide .Location {
+border-bottom: 1px solid #dce1e4;
+text-align: right;
+padding: 6px 10px 5px 10px;
+color: #999!important;
+margin-bottom: 30px;
+}
+#newslist{ text-align:center; width:780px; height:auto; margin-left:auto; margin-right:auto;font-family:Tahoma, Geneva, sans-serif; font-size:18px}
+#newsmain{ width:1020px; margin-left:auto; margin-right:auto; border=1 cellspacing=0 cellpadding=0 bordercolor=#000000}
+#titlenav{ background-color:#0CF}
+#newsinfoimg{ background-color: #7898F8; height:160px; text-align:center; padding-top:120px; font-size:54px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+#newscontents{ background-color:#fff; height:auto; margin-top:10px; line-height:25px; font-size:14px;}
+.introduce{ font-size:14px;}

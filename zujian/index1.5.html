@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oppo</title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding:0;
+        list-style: none;
+        overflow-x: hidden;
+    }
+    h2{
+        text-align: center;
+    }
+    .cont{
+        height: 2000px;
+        position: relative;
+    }
+    .size{
+        width:600px;
+        height: 300px;
+        background-color: #0074d9;
+    }
+    #one{
+        background-color: green;
+        position: absolute;
+        top: 1000px;
+        left:-600px;
+    }
+
+    #two{
+        background-color: red;
+        position: absolute;
+        top: 1000px;
+        right:-600px;
+    }
+
+    #three{
+        background-color: yellow;
+        position: absolute;
+        top: 1400px;
+        left:-600px;
+    }
+
+
+    #four{
+        background-color: pink;
+        position: absolute;
+        top: 1400px;
+        right:-600px;
+    }
+    #show{
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        text-align: center;
+        line-height: 300px;
+        font-size: 50px;
+        color: red;
+    }
+</style>
+<body>
+<div id="show"></div>
+<h2>向下拉</h2>
+<div class="cont">
+    <div class="size" id="one"></div>
+    <div class="size" id="two"></div>
+    <div class="size" id="three"></div>
+    <div class="size" id="four"></div>
+</div>
+</body>
+<script type="text/javascript">
+    var show=document.getElementById("show");
+    var one=document.getElementById("one");
+    var two=document.getElementById("two");
+    var three=document.getElementById("three");
+    var four=document.getElementById("four");
+    //这是标量，当事件触发后，该参数置为0
+    var flag1=1;
+    var flag2=1;
+    document.onscroll=function(){
+        var height=document.documentElement.scrollTop||document.body.scrollTop;
+        if(height>=600 && flag1==1){
+            flag1=0;
+            move(one,"left");
+            move(two,"right");
+
+        }
+
+        if(height>=900 && flag2==1){
+            flag2=0;
+            move(three,"left");
+            move(four,"right");
+
+        }
+
+    }
+
+    function move(obj,style){
+        var i=-600;
+        var timer=setInterval(function(){
+
+            i=i+2;
+            if(i>=0){
+                clearInterval(timer);
+            }
+            obj.style[style]=(i+2)+'px';
+        }, 5)
+    }
+
+
+</script>
+</html>

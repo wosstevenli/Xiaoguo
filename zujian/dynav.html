@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/dynav.css">
+    <!--<script src="js/jquery-3.1.0.min.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/dy.js"></script>
+    <!--<script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var items = $("#content").find(".item");
+                var menu = $("#menu");
+                var top = $(document).scrollTop();
+                var currentId = ""; //滚动条现在所在位置的item id
+                items.each(function () {
+                    var m = $(this);
+                    //注意：m.offset().top代表每一个item的顶部位置
+                    if (top > m.offset().top - 300) {
+                        currentId = "#" + m.attr("id");
+                    } else {
+                        return false;
+                    }
+                });
+
+                var currentLink = menu.find(".current");
+                if (currentId && currentLink.attr("href") != currentId) {
+                    currentLink.removeClass("current");
+                    menu.find("[href=" + currentId + "]").addClass("current");
+                }
+            });
+        });
+    </script>-->
+    <title>定位导航</title>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#item1" class="current">1F 男装</a></li>
+        <li><a href="#item2">2F 女装</a></li>
+        <li><a href="#item3">3F 彩妆</a></li>
+        <li><a href="#item4">4F 美妆</a></li>
+        <li><a href="#item5">5F 化妆</a></li>
+    </ul>
+</div>
+<div id="content">
+    <h1>shopingmall</h1>
+    <div id="item1" class="item">
+        <h2>1F 男装</h2>
+        <ul>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+            <li><a href="#"><img src="images/11.jpg" alt="男装"></a></li>
+        </ul>
+    </div>
+
+    <div id="item2" class="item">
+        <h2>2F 女装</h2>
+        <ul>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+            <li><a href="#"><img src="images/12.jpg" alt="女装"></a></li>
+        </ul>
+    </div>
+
+    <div id="item3" class="item">
+        <h2>3F 彩装</h2>
+        <ul>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt="彩装"></a></li>
+        </ul>
+    </div>
+
+    <div id="item4" class="item">
+        <h2>4F 美装</h2>
+        <ul>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt="美装"></a></li>
+        </ul>
+    </div>
+
+    <div id="item5" class="item">
+        <h2>5F 化妆</h2>
+        <ul>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt="化妆"></a></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

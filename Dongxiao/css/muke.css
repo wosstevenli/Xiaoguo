@@ -1,0 +1,14 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.fenxiang{
+    width: 25px;
+    height: 100px;
+    background-color: #3079ed;
+    color: #fff;
+}
+.share{
+    line-height: 50px;
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+#adminlogo{
+	float:left; margin-left:150px; height:50px;
+	}
+#admintitle{
+	float:right; margin-right:600px; height:20px;
+	}
+.Menu {
+height: 30px;
+float: left;
+display: inline;
+}
+.Menu a {
+display: inline-block;
+height: 16px;
+margin: 23px 0 0 50px;
+font: 600 14px/16px "微软雅黑","宋体";
+color: #666!important;
+}
+.Footer {
+height: 75px;
+padding-top: 25px;
+background: url(../images/footer_bg.gif) no-repeat center top;
+}
+.Footer .ZiFooter {
+text-align:center;
+width: 1000px;
+margin: 0 auto;
+text-align: center;
+font-size: 12px;
+color: #666;
+font-family: Arial;
+line-height: 200%;
+}

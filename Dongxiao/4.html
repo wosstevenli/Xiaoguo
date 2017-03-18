@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>二级下拉菜单鼠标滑动显示隐藏header</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/headroom.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="description" content="隐藏或展现页面上的元素">
+</head>
+<body>
+
+<header id="header" class="header header--fixed hide-from-print" role="banner">
+    <div class="container">
+        <!--touch nav-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+                </div>
+
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">企业栏目二<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">企业栏目三<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">企业栏目三</a></li>
+                        <li><a href="#">企业栏目三</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--touch nav end -->
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 cc"></div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var header = new Headroom(document.querySelector("#header"), {
+            tolerance: 5,
+            offset: 205,
+            classes: {
+                initial: "animated",
+                pinned: "flipInX",
+                unpinned: "flipOutX"
+            }
+        });
+        header.init();
+
+        var bttHeadroom = new Headroom(document.getElementById("btt"), {
+            tolerance: 0,
+            offset: 500,
+            classes: {
+                initial: "slide",
+                pinned: "slide--reset",
+                unpinned: "slide--down"
+            }
+        });
+        bttHeadroom.init();
+    }());
+</script>
+
+<script src="js/jquery.bootstrap-dropdown-hover.min.js"></script>
+<script>
+    //$('[data-toggle="dropdown"]').bootstrapDropdownHover();
+    $.fn.bootstrapDropdownHover();
+    //$('#dropdownMenu1').bootstrapDropdownHover();
+    //$('.navbar [data-toggle="dropdown"]').bootstrapDropdownHover();
+</script>
+</body>
+</html>

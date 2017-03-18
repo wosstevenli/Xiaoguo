@@ -1,0 +1,1 @@
+jQuery5535216({"info":"<a href=\"javascript:login();\" class=\"link-login\">你好，请登录<\/a>&nbsp;&nbsp;<a href=\"javascript:regist();\" class=\"link-regist style-red\">免费注册<\/a>"})

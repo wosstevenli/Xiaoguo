@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/index.css">-->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <style>
+        .guanggao{
+            background-color: #ccc;
+            height: 150px;
+        }
+        .x{
+            position: relative;
+            transition: transform 0.5s;
+            cursor: pointer;
+            float: right;
+            margin-top: 5px;
+        }
+        /*.x:before{
+            display: none;
+            position: absolute;
+            transform: rotate(45deg);
+        }
+        .x:after{
+            display: block;
+            position: absolute;
+            transform: rotate(-45deg);
+        }*/
+        .someDiv{
+            transform: rotate(45deg);/*顺时针旋转45度*/
+        }
+        .x:hover{
+             transform: rotate(360deg);
+         }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 guanggao" id="djguanbi">
+            <div class="x" id="guanbiguanggao" onclick="guanbiguanggao()"><img  src="images/tpgb.png" /></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function guanbiguanggao(){
+        document.getElementById("djguanbi").style.display="none";
+    }
+</script>
+</body>
+</html>

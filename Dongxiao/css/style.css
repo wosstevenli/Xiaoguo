@@ -1,0 +1,210 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.nr{
+    margin-top: 51px;
+    background-color:#f9f9f9;
+}
+.nr1{
+    margin-top: 100px;
+    background-color: #f9f9f9;
+}
+.cc{
+    height: 1200px;
+}
+.navbar-default{
+    background-color: #292f36;
+}
+.nav>li:hover{
+    background-color: green;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #fff;
+}
+.navbar-header a img{
+    margin-top: -12px;
+}
+.fhdb{
+    position: fixed;
+    bottom: 200px;
+    background-color: #a4afba;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    color: #131619;
+}
+.fhdb:hover{
+    background-color: #ae81ff;
+}
+.caption{
+    background-color: #ae81ff;
+    text-align: center;
+    height: 300px;
+    border-radius: 15px;
+}
+.fd{
+    margin-top: 10px;
+    background-color: green;
+    height: 150px;
+    position: absolute;
+    width: 90%;
+}
+.fd1{
+    background-color: #3f4953;
+}
+.fd2{
+    background-color: #6f6f6f;
+}
+.fd3{
+    background-color: #798899;
+}
+.fd4{
+    background-color: #a4afba;
+}
+.bt{
+    text-align: center;
+    color: #fff;
+}
+.bk{
+    border: solid 2px green;
+    border-radius: 10px;
+}
+
+.fd1{
+    background-color: #a4afba;
+}
+.lyh{
+    background-color: #3dded3;
+    height: 300px;
+}
+.bmul{
+    list-style: none;
+}
+.bmul>li{
+    height: 30px;
+}
+.alt{
+    background-color: #131619;
+}
+
+/*.jdcz{  //需知道对象的宽高
+	width:500px;
+	height:200px;
+	background-color:#ccc;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -100px;
+	margin-left: -250px;
+}*/
+
+/*.jdcz{  //HTML5浏览器兼容问题
+	width: 600px;
+	height: 200px;
+	background-color: #ccc;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}*/
+
+.jdcz{
+	width: 500px;
+	height: 200px;
+	background-color: #ccc;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.search{
+    float: left;
+    margin: 15px auto auto 250px;
+}
+.search input{
+    height: 25px;
+    border: solid 1px #3079ed;
+}
+.searchip{
+    border-radius: 5px 0 0 5px;
+}
+.searchbt{
+    width: 52px;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    background-color: #3079ed;
+}
+/*六角形*/
+#starsix {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    position: relative;
+}
+#starsix:after {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -50px;
+}
+/*五角星*/
+#star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0;
+    height: 0;
+    border-right:  100px solid transparent;
+    border-bottom: 70px  solid red;
+    border-left:   100px solid transparent;
+    -moz-transform:    rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform:     rotate(35deg);
+    -o-transform:      rotate(35deg);
+}
+#star-five:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+
+}
+#star-five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+}

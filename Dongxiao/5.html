@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>二级下拉菜单鼠标滑动显示隐藏header/js特效</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/headroom.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="description" content="隐藏或展现页面上的元素">
+</head>
+<body>
+
+<header id="header" class="header header--fixed hide-from-print" role="banner">
+    <div class="container">
+        <!--touch nav-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+                </div>
+
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">企业栏目二<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">企业栏目三<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                                <li><a href="#">业栏目二</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">企业栏目三</a></li>
+                        <li><a href="#">企业栏目三</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!--touch nav end -->
+    </div>
+</header>
+
+<div class="container">
+    <div class="row nr1 cc">
+    <!-- JS交互-->
+        <!--<div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div>
+                <a href="#" title="001" target="_blank"></a>
+                <div class="caption">001</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div>
+                <a href="#" title="002" target="_blank" ></a>
+                <div class="caption">002</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div>
+                <a href="#" title="003" target="_blank"></a>
+                <div class="caption">003</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div>
+                <a href="#" title="004" target="_blank"></a>
+                <div class="caption">004</div>
+            </div>
+        </div>-->
+
+
+        <!-- 点击消失-->
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div class="fd fd1">
+                <a href="#" title="001" target="_blank"></a>
+                <div class="bt">005</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div class="fd fd2">
+                <a href="#" title="002" target="_blank" ></a>
+                <div class="bt">006</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div class="fd fd3">
+                <a href="#" title="003" target="_blank"></a>
+                <div class="bt">007</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div class="fd fd4">
+                <a href="#" title="004" target="_blank"></a>
+                <div class="bt">008</div>
+            </div>
+        </div>
+        <!-- -->
+        <div class="col-xs-12 col-sm-6 col-md-3 lyh"></div>
+    </div>
+    <!--JS交互END-->
+    <!--<div class="col-xs-1 fhdb"><img src="images/backtop01.png"></div>-->
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-8 fhdb" style="display: none">
+            <!--<a style="display: none"><img src="images/backtop01.png"></a>-->
+            <a>TOP</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="bmul">
+                <li>第1条信息</li>
+                <li>第2条信息</li>
+                <li>第3条信息</li>
+                <li>第4条信息</li>
+                <li>第5条信息</li>
+                <li>第6条信息</li>
+                <li>第7条信息</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    (function () {
+        var header = new Headroom(document.querySelector("#header"), {
+            tolerance: 5,
+            offset: 205,
+            classes: {
+                initial: "animated",
+                pinned: "flipInX",
+                unpinned: "flipOutX"
+            }
+        });
+        header.init();
+
+        var bttHeadroom = new Headroom(document.getElementById("btt"), {
+            tolerance: 0,
+            offset: 500,
+            classes: {
+                initial: "slide",
+                pinned: "slide--reset",
+                unpinned: "slide--down"
+            }
+        });
+        bttHeadroom.init();
+    }());
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".caption").click(function(){
+            $(this).hide();
+        });
+
+        /*$(".fd").mouseover(function(){
+           $(".fd").css("background-color","yellow");
+        });
+
+        $(".fd").mouseout(function(){
+            $(".fd").css("background-color","black");
+        });*/
+
+//        左动画
+        /*$(".fd").mouseover(function(){
+            $(this).animate({left:'250px'});
+        });*/
+
+        //浮动效果
+        /*$(".fd").mouseover(function(){
+            $(this).animate({top:'10px'});
+        });
+
+        $(".fd").mouseout(function(){
+            $(this).animate({top:'0px'});
+        });*/
+
+        //浮动效果+css
+        /*$(".fd").mouseover(function(){
+            $(this).animate({top:'20px'});
+            $(this).toggleClass("bk");
+        });
+
+        $(".fd").mouseout(function(){
+            $(this).animate({top:0});
+            $(this).toggleClass("bk");
+        })*/
+
+        $(".fd").mouseover(function(){
+            $(this).animate({top:'20px'}).toggleClass("bk");
+        });
+
+        $(".fd").mouseout(function(){
+            $(this).animate({top:0}).toggleClass("bk");
+        });
+
+    });
+
+</script>
+
+<script>
+    //back2top
+    //var hi;
+
+</script>
+
+<script>
+    //斑马纹
+    $(document).ready(function(){
+        $(".bmul li:odd").addclass(".alt");
+    });
+</script>
+
+<script src="js/jquery.bootstrap-dropdown-hover.min.js"></script>
+<script>
+    //$('[data-toggle="dropdown"]').bootstrapDropdownHover();
+    //$.fn.bootstrapDropdownHover();
+    $('#dropdownMenu1').bootstrapDropdownHover();
+    //$('.navbar [data-toggle="dropdown"]').bootstrapDropdownHover();
+</script>
+</body>
+</html>

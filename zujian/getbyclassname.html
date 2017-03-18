@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>getElementbyClassName</title>
+</head>
+<body>
+
+<ul class="example">
+    <li class="child">Coffee</li>
+    <li class="child">Tea</li>
+    <li class="child">豆腐</li>
+    <li class="child">烧烤</li>
+</ul>
+<p>点击按钮修改第一个列表项的文本信息 (索引值为 0)。</p>
+<button onclick="myFunction()">点我</button>
+<p><strong>注意:</strong> Internet Explorer 8 及更早 IE 版本不支持 getElementsByClassName() 方法。</p>
+<script>
+    function myFunction() {
+        var list = document.getElementsByClassName("example")[0];
+        list.getElementsByClassName("child")[0].innerHTML = "Milk";
+    }
+</script>
+
+</body>
+</html>

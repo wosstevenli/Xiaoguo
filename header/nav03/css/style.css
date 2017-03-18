@@ -1,0 +1,82 @@
+@charset "UTF-8";
+body{
+    margin:0;
+}
+.top{
+    width: 100%;
+    background-color: #c9c9c9;
+    height: 30px;
+}
+.reglogin{
+    width: 1200px;
+    background-color: #0066cc;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+}
+.reglogin ul{
+    float: right;
+    list-style: none;
+    height: 30px;
+    display: block;
+    margin-top: 0;
+    margin-right: 50px;
+}
+.reglogin ul li{
+    float: left;
+    margin: 0;
+    padding-right: 10px;
+    font-family: "Microsoft Yahei", "微软雅黑", 'Arial Unicode MS', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    display: list-item;
+}
+.reglogin ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.reglogin ul li a:hover{
+    color: darkred;
+}
+.logonav{
+    width: 1200px;
+    background-color: #0099FF;
+    height: 100px;
+    margin: 0 auto;
+}
+.logo{
+    float: left;
+}
+.nav{
+    float: left;
+    list-style: none;
+    margin:40px auto;
+}
+.nav li{
+    float: left;
+    padding-right: 100px;
+}
+.ste{
+    float: left;
+    margin-left: 100px;
+    background-color: #000;
+    width: 500px;
+    height: 30px;
+    margin-top: 35px;
+}
+.ddnav{
+    background-color: #23B04A;
+    width: 100%;
+    min-width: 1200px;
+    height: 100px;
+}
+.dddht{
+    list-style: none;
+    margin: 0 auto;
+    width: 1200px;
+    min-width: 1200px;
+    padding-top: 35px;
+}
+.dddht li{
+    float: left;
+    padding-right: 100px;
+}

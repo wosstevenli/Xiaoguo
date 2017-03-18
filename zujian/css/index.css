@@ -1,0 +1,90 @@
+.gb{
+     background-color: #025aa5;
+     height: 300px;
+     margin-top: 30px;
+     color: #fff;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-size: 20px;
+     border-radius: 8px;
+ }
+.gb p{
+    padding-left: 40%;
+    padding-top: 40%;
+}
+#gb_btn{
+    padding-left: 350px;
+    margin-top: -180px;
+    cursor: pointer;
+}
+#gb_btn a{
+    color: #fff;
+}
+#gb_btn a:hover{
+    color: red;
+}
+.egjson{
+    background-color: #2aabd2;
+    height: 200px;
+    margin-top: 30px;
+}
+/*关闭按钮*/
+.guanggao{
+    background-color: #ccc;
+    height: 150px;
+}
+.x{
+    width: 31px;
+    height: 31px;
+    position: relative;
+    background-color: #000;
+    transition: transform 0.5s;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+.x:before{
+    content:"";
+    display: block;
+    width: 1px;
+    height: 32px;
+    background-color: #fff;
+    position: absolute;
+    left: 15px;
+    top: -1px;
+    transform: rotate(45deg);
+}
+.x:after{
+    content:"";
+    display: block;
+    width: 1px;
+    height: 32px;
+    background-color: #fff;
+    position: absolute;
+    left: 15px;
+    top: -1px;
+    transform: rotate(-45deg);
+}
+.someDiv{
+    transform: rotate(45deg);/*顺时针旋转45度*/
+}
+.x:hover{
+    transform: rotate(360deg);
+}
+/*关闭按钮END*/
+
+/*tp关闭按钮*/
+.tpguanggao{
+    background-color: #cc6060;
+    height: 150px;
+}
+#tpguanbiguanggao{
+    float: right;
+    margin-top: 5px;
+}
+.someDiv{
+    transform: rotate(45deg);/*顺时针旋转45度*/
+}
+#tpguanbiguanggao:hover{
+    transform: rotate(360deg);
+}
+/*关闭按钮END*/
