@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sw4动态显示隐藏head</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <meta name="description" content="隐藏或展现页面上的元素">
+</head>
+<body>
+
+<header id="header" class="header header--fixed hide-from-print" role="banner">
+    <div class="container">
+        <nav id="nav" class="nav-wrapper" role="navigation">
+            <ul class="nav nav--main">
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="#">
+                        <span class="complimentary push--left">菜单栏目一</span>
+                    </a>
+                </li>
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="#">
+                        <span class="complimentary push--left">菜单栏目二</span>
+                    </a>
+                </li>
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="#">
+                        <span class="complimentary push--left">菜单栏目三</span>
+                    </a>
+                </li>
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="#">
+                        <span class="complimentary push--left">菜单栏目四</span>
+                    </a>
+                </li>
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="#">菜单栏目五</a>
+                    <ul style="display: none">
+                        <li><a href="#">子菜单一</a></li>
+                        <li><a href="#">子菜单二</a></li>
+                        <li><a href="#">子菜单三</a></li>
+                        <li><a href="#">子菜单四</a></li>
+                        <li><a href="#">子菜单五</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="brand header__link">COMPANY LOGO</a>
+    </div>
+</header>
+
+<div class="container block main" role="main">
+    <div class="row">
+        <div class="col-xs-12 zw"></div>
+    </div>
+</div>
+
+<script src="js/headroom.min.js"></script>
+<script>
+    (function () {
+        var header = new Headroom(document.querySelector("#header"), {
+            tolerance: 5,
+            offset: 205,
+            classes: {
+                initial: "animated",
+                pinned: "flipInX",
+                unpinned: "flipOutX"
+            }
+        });
+        header.init();
+
+        var bttHeadroom = new Headroom(document.getElementById("btt"), {
+            tolerance: 0,
+            offset: 500,
+            classes: {
+                initial: "slide",
+                pinned: "slide--reset",
+                unpinned: "slide--down"
+            }
+        });
+        bttHeadroom.init();
+    }());
+</script>
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>

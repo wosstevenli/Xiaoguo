@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* bootstrap dropdown hover menu*/
+
+body {
+}
+
+.body-wrap {
+}
+
+.body-wrap {
+}
+
+.body-wrap:before,
+.body-wrap:after {
+}
+
+.body-wrap:after {
+}
+
+nav {
+    /*box-shadow: 5px 4px 5px #000;*/
+}
+.zynr{
+    margin-top: 53px;
+    height: 800px;
+    background-color: #ccc;
+}
+@media(min-width: 768px){
+    .navbar{
+        border-radius: 0;
+    }
+}
