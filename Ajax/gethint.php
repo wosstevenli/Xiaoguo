@@ -58,7 +58,7 @@ if (strlen($q) > 0)
 // or to the correct values
 if ($hint == "")
   {
-  $response="no suggestion";
+  $response="数据库内没有你输入的内容";
   }
 else
   {
