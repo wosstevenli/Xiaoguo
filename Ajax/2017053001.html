@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>端午节AJAX</title>
+    <script>
+        function ajaxfunction(the_request_url){
+            var xmlHttp;
+            try{
+                xmlHttp = new XMLHttpRequest();
+            }
+            catch(e){
+                try{
+                    xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch(e){
+                    try{
+                        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    catch(e){
+                        alert("您的浏览器不支持Ajax，请升级或更换更高级的浏览器");
+                        return false;
+                    }
+                }
+            }
+
+            if(xmlHttp){
+                xmlHttp.open('GET',the_request_url,true);
+                xmlHttp.onreadystatechange = function(){
+                    if(xmlHttp.readystate ==4){
+                        if(xmlHttp.status ==200){
+                            document.getElementById('vv').innerHTML = xmlHttp.responseText;
+                        }
+                    }
+                };
+                xmlHttp.send(null);
+            } else{
+                alert('error');
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="test" value="test" onclick="javascript:ajaxfunction('ajax-3.txt')" />
+    <div id="vv">HUUU</div>
+</body>
+</html>
