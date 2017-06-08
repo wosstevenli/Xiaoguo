@@ -29,7 +29,7 @@
             if(xmlHttp){
                 xmlHttp.open('GET',the_request_url,true);
                 xmlHttp.onreadystatechange = function(){
-                    if(xmlHttp.readystate ==4){
+                    if(xmlHttp.readyState ==4){  //注意这个的大小写！！！！！！
                         if(xmlHttp.status ==200){
                             document.getElementById('vv').innerHTML = xmlHttp.responseText;
                         }

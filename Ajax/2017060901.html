@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX runoob实例学习</title>
+    <script>
+        function loadxmldoc(){
+            var xmlhttp,txt,x,i,y,z;
+            if(window.XMLHttpRequest)
+            {
+                //IE7+,FIREFOX CHROME OPERA SAFARI等高级浏览器对象名称
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                //IE7以下的浏览器
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function(){
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)  //注意readyState的大小写
+                {
+					xmlDoc=xmlhttp.responseXML;
+					txt="";
+					//add another
+					z="";
+					x=xmlDoc.getElementsByTagName("ARTIST");
+					for(i=0;i<x.length;i++){
+						txt=txt+x[i].childNodes[0].nodeValue + "<br>";
+					}
+					//add another
+					y=xmlDoc.getElementsByTagName("COUNTRY");
+					for(i=0;i<y.length;i++){
+						z=z+y[i].childNodes[0].nodeValue+"<br>"
+					}
+                    document.getElementById("div001").innerHTML=txt+z;
+                }
+            }
+            //创建 XMLHttpRequest 对象
+            xmlhttp.open("GET","cd_catalog.xml",true);
+            xmlhttp.send();
+            //向服务器发送请求请求
+        }
+    </script>
+</head>
+<body>
+    <div id="div001"><h3>一定要学会ajax和json这是基础  注意readyState的大小写</h3></div>
+    <p>XMLHttpRequest 是 AJAX 的基础<br>
+    所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。
+    XMLHttpRequest 用于在后台与服务器交换数据</p>
+    <div>这个案例不明显，这种效果js本身就可以达到通过修改inerHTML，在不知道是从
+        TXT文档传过来内容的情况下是不知道用了ajax技术的
+    </div>
+    <button type="button" onclick="loadxmldoc()">点击调用</button>
+</body>
+</html>
