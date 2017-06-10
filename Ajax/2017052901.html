@@ -1,76 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ajax学习过程</title>
+    <title>Ajax学习过程-检测浏览器是否支持</title>
     <script>
-        function doAjax(the_request){
-            var request=null;
-            if(window.XMLHttpRequest){
+        function doAjax(the_request) {
+            var request = null;
+            if (window.XMLHttpRequest) {
                 request = new XMLHttpRequest();
                 alert("你的浏览器是XMLHttpRequest");
-            } else if(window.ActiveXObject){
+            } else if (window.ActiveXObject) {
                 request = new ActiveXObject('Microsoft.XMLHTTP');
                 alert("你的浏览器是XMLHttpRequest");
-            }else{
+            } else {
                 alert("你的浏览器不支持Ajax");
                 return false;
             }
         }
     </script>
 </head>
+
 <body>
-    <input type="button" onclick="doAjax('ajax-02.txt')"/>
+    <!--<input type="button" onclick="doAjax('ajax-3.txt')" />-->
+    <input type="button" id="btn" value="loadajax" onclick="doAjax('ajax-3.txt')" />
     <!--request = new XMLHttpRequest()
         xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
         xmlhttp = new ActiveXObject('Msxml2.XMLHTTP')  主要是上两种方式
     -->
     <p>
-        1:Http请求
-            XMLHttpRequest
-
-        2：XMLHttpRequest对象 (Ajax核心)
-
-        3：创建XMLHttpRequest对象
-
-        4：请求服务器
-            4.1 onreadystatechange属性，存储处理服务器响应的函数
-            request.onreadystatechange = function(){
-                //函数内容
-                if(request.readystate ==4){
-                    //从服务器获取到的数据代码，并做相应处理
-                    alert(request.responseText);
-                }
-            }
-
-            4.2 readystate属性 5个值
-                0：请求未初始化
-                1：请求已经提出在发出去之前
-                2：请求已经发出去
-                3：服务器正在处理中，没有响应完成
-                4：服务器响应完成
-
-            4.3 responseText属性
-
-            4.4 请求发送到服务器
-                方法一：open()
-                GET/POST http方法
-                URL
-                异步处理的标志
-
-                request.open("GET","test.txt",true);
-                request.onreadystatechange = function(){
-                    if(request.readystate == 4){
-                        alert(request.responseText);
-                    }
-                }
-
-                方法二：send()
-                request.send(null)
+        1:Http请求 XMLHttpRequest 2：XMLHttpRequest对象 (Ajax核心) 3：创建XMLHttpRequest对象 4：请求服务器 4.1 onreadystatechange属性，存储处理服务器响应的函数 request.onreadystatechange = function(){ //函数内容 if(request.readystate ==4){ //从服务器获取到的数据代码，并做相应处理 alert(request.responseText); } } 4.2
+        readystate属性 5个值 0：请求未初始化 1：请求已经提出在发出去之前 2：请求已经发出去 3：服务器正在处理中，没有响应完成 4：服务器响应完成 4.3 responseText属性 4.4 请求发送到服务器 方法一：open() GET/POST http方法 URL 异步处理的标志 request.open("GET","test.txt",true); request.onreadystatechange = function(){ if(request.readystate
+        == 4){ alert(request.responseText); } } 方法二：send() request.send(null)
 
 
     </p>
 </body>
+
 </html>
