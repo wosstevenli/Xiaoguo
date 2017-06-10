@@ -1,6 +1,6 @@
 <?php
 response.expires=-1
-sql="SELECT * FROM CUSTOMERS WHERE CUSTOMERID="
+sql="SELECT * FROM account WHERE username="
 sql=sql & "'" & request.querystring("q") & "'"
 
 set conn=Server.CreateObject("ADODB.Connection")

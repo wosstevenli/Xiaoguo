@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ajax注册验证</title>
+    <script>
+        function showhint(str){
+            var xmlhttp;
+            if (str.length==0)
+  { 
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest)
+  {
+    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET","gethint.php?q="+str,true);
+  xmlhttp.send();
+        }
+    </script>
 </head>
 <body>
     <p>
@@ -12,5 +41,10 @@
         2：获取手机短信验证码
         3：刷新表单验证码
     </p>
+    <h3>输入检测提示内容</h3>
+    <form action="">
+        输入姓名：<input type="text" id="name" onkeyup="showhint(this.value)" />
+    </form>
+    <p>提示内容：<span id="txtHint"></span></p>
 </body>
 </html>
