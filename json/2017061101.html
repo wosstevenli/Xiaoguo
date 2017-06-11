@@ -17,26 +17,27 @@
 
     <script>
         /*var JsonObject, x;
-                                                        JsonObject = {
-                                                            "name": "lishuang",
-                                                            "age": 30,
-                                                            "sex": "Man"
-                                                        };
-                                                        for (x in JsonObject) {
-                                                            // document.getElementById("xunhuan").innerHTML += x + "<br>";
-                                                            document.getElementById("xunhuan").innerHTML += x + ":" + JsonObject[x] + "<br>";
-                                                        }*/
+                                                                        JsonObject = {
+                                                                            "name": "lishuang",
+                                                                            "age": 30,
+                                                                            "sex": "Man"
+                                                                        };
+                                                                        for (x in JsonObject) {
+                                                                            // document.getElementById("xunhuan").innerHTML += x + "<br>";
+                                                                            document.getElementById("xunhuan").innerHTML += x + ":" + JsonObject[x] + "<br>";
+                                                                        }*/
         //嵌套Json对象
         var JsonObject = {
-            "name": "TAYLOR.SWIFT",
-            "age": 30,
-            "song": {
-                "CD1": "YOU NEVER NEVER SAY GOODBYE",
-                "CD2": "TADEMAMABUAIWO",
-                "CD3": "WOHENIWENBIE"
+                "name": "TAYLOR.SWIFT",
+                "age": 30,
+                "song": {
+                    "CD1": "YOU NEVER NEVER SAY GOODBYE",
+                    "CD2": "TADEMAMABUAIWO",
+                    "CD3": "WOHENIWENBIE"
+                }
             }
-        }
-        delete JsonObject.song.CD2;
+            //JsonObject.song.CD2 = "hulagezouzou"
+            //delete JsonObject.song.CD2;
         document.getElementById("xunhuan").innerHTML = JsonObject.song.CD2;
     </script>
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json循环</title>
+
+</head>
+
+<body>
+    <p>循环Json数组</p>
+    <p>JSON.parse(text[, reviver])方法将从服务器接收到的字符串数据转换为 JavaScript 对象，text:必需， 一个有效的 JSON 字符串。 reviver: 可选，一个转换结果的函数， 将为对象的每个成员调用此函数。</p>
+    <p id="xunhuan"></p>
+    <script src="js/js01.js"></script>
+    <!--<script>
+        var i = "";
+        var x;
+        var JsonObject = {
+            "name": "JOHN WICK",
+            "age": 35,
+            "song": ["只想一生跟你走", "只愿一生爱一人", "如果这都不算爱"]
+        };
+        for (i in JsonObject.song) {
+            x += JsonObject.song[i] + "<br>"; //x=x+JsonObject.song[i]需要知道X的初始值
+        }
+
+        document.getElementById("xunhuan").innerHTML = x;
+    </script>-->
+
+</body>
+
+</html>

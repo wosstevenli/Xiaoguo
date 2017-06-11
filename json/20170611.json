@@ -1,11 +1,34 @@
-[{
-        "name": "泰勒.斯威夫特",
-        "age": 28,
-        "country": "American"
-    },
-    {
-        "name": "尼古拉斯.凯奇",
-        "age": 42,
-        "country": "American"
-    }
-]
+/*{
+    "name": "泰勒.斯威夫特",
+    "age": 28,
+    "song": [{
+        "CD1 ": "LOVE THE WAY YOU LIE ",
+        "YEAR ": 1989,
+        "MINGCI ": "第一名 "
+    }, {
+        "CD2 ": "BIG BIG WORLD ",
+        "YEAR ": 2012,
+        "MINGCI ": "还是第一名 "
+    }, {
+        "CD3 ": "BLACK SPACE ",
+        "YEAR ": 2016,
+        "MINGCI ": "第二名吧 "
+    }]
+}*/
+{
+    "name": "泰勒.斯威夫特",
+    "age": 28,
+    "song": [{
+        "CD1 ": "LOVE THE WAY YOU LIE ",
+        "YEAR ": 1989,
+        "MINGCI ": "第一名 "
+    }, {
+        "CD2 ": "BIG BIG WORLD ",
+        "YEAR ": 2012,
+        "MINGCI ": "还是第一名 "
+    }, {
+        "CD3 ": "BLACK SPACE ",
+        "YEAR ": 2016,
+        "MINGCI ": "第二名吧 "
+    }]
+}
