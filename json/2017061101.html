@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json循环</title>
+
+</head>
+
+<body>
+    <p id="name">STEVENLI</p>
+    <p id="age">TAYLOR SWIFT</p>
+    <p id="post">JOHN WICK</p>
+    <p id="xunhuan"></p>
+
+    <script>
+        /*var JsonObject, x;
+                                                        JsonObject = {
+                                                            "name": "lishuang",
+                                                            "age": 30,
+                                                            "sex": "Man"
+                                                        };
+                                                        for (x in JsonObject) {
+                                                            // document.getElementById("xunhuan").innerHTML += x + "<br>";
+                                                            document.getElementById("xunhuan").innerHTML += x + ":" + JsonObject[x] + "<br>";
+                                                        }*/
+        //嵌套Json对象
+        var JsonObject = {
+            "name": "TAYLOR.SWIFT",
+            "age": 30,
+            "song": {
+                "CD1": "YOU NEVER NEVER SAY GOODBYE",
+                "CD2": "TADEMAMABUAIWO",
+                "CD3": "WOHENIWENBIE"
+            }
+        }
+        delete JsonObject.song.CD2;
+        document.getElementById("xunhuan").innerHTML = JsonObject.song.CD2;
+    </script>
+
+</body>
+
+</html>

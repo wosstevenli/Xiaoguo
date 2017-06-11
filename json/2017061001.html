@@ -20,11 +20,11 @@
 
     <script>
         /*var JsonObject = {
-                                                                                    "name": "steven web designer",
-                                                                                    "age": "dont ask",
-                                                                                    "post": "THIS YEAR TO BUY A 510"
-                                                                                };*/ //一个对象
-        var JsonObject = [{
+                                                "name": "steven web designer",
+                                                "age": "dont ask",
+                                                "post": "THIS YEAR TO BUY A 510"
+                                                };*/ //一个对象
+        /*var JsonObject = [{
             "name": "STEVEN",
             "CITY": "HONGKONG",
             "type": "ICAC"
@@ -32,14 +32,22 @@
             "name": "tong",
             "CITY": "taipei",
             "type": "jiubao"
-        }]
+        }]*/
+        var JsonObject, x;
+        JsonObject = {
+            "name": "stevenli",
+            "age": 30,
+            "sex": "Man"
+        };
+        x = JsonObject.name;
 
         /*document.getElementById("name").innerHTML = JsonObject.name
         document.getElementById("age").innerHTML = JsonObject.age
         document.getElementById("post").innerHTML = JsonObject.post*/
 
-        document.getElementById("name").innerHTML = JsonObject[0].name;
-        document.getElementById("age").innerHTML = JsonObject[1].CITY
+        /*document.getElementById("name").innerHTML = JsonObject[0].name;
+        document.getElementById("age").innerHTML = JsonObject[1].CITY;*/
+        document.getElementById("name").innerHTML = JsonObject.name
     </script>
 
 </body>
