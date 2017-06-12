@@ -150,3 +150,31 @@ document.getElementById("div001").innerHTML = myJson;*/
 //var obj = { "name": "STEVEN", "alexa": 189, "title": "Designer" };
 //var myJson = JSON.stringify(arr);//这个好像就是处理json和数组对象的函数
 //document.getElementById("div001").innerHTML = obj; //这个还必须经过stringify来处理输入，不然输出的将是字符串
+
+//var obj = { "name": "steven", "initDate": new Date(), "JOB": "Designer" };
+/*var obj = { "name": "steven", "initDate": "2017-06-12", "JOB": "Designer" };
+var JsonObject = JSON.stringify(obj);
+document.getElementById("div001").innerHTML = JsonObject;*/
+
+/*var obj = { "name": "steven", "paiming": function() { return 1000 }, "title": "JUSTIN BIBER" };
+var JsonObject = JSON.stringify(obj); //将删除对象中的函数
+document.getElementById("div001").innerHTML = JsonObject;*/
+
+/*var obj = { "name": "steven", "paiming": function() { return 1000 }, "title": "JUSTIN BIBER" };
+obj.paiming = obj.paiming.toString(); //将paiming的值转化为string字符串
+var JsonObject = JSON.stringify(obj);
+document.getElementById("div001").innerHTML = JsonObject;*/
+
+// var json001 = '{"name":[' + '{"people":"JOBS","GS":"Apple"},' + '{"people":"bill","GS":"microsoft"},' + '{"name":"max","GS":"TESTA"}]}';
+/*var json001 = '{"name":[{"people":"JOBS","GS":"Apple"},{"people":"bill","GS":"microsoft"},{"name":"max","GS":"TESTA"}]}';
+var JsonObject = eval("(" + json001 + ")");
+document.getElementById("div001").innerHTML = JsonObject.name[1].people + JsonObject.name[2].GS;*/
+
+/*function callbackFunction(result, methodName) {
+    var html = '<ul>';
+    for (var i = 0; i < result.length; i++) {
+        html += '<li>' + result[i] + '</li>';
+    }
+    html += '</ul>';
+    document.getElementById('div001').innerHTML = html;
+};*/

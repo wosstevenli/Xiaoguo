@@ -5,13 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.8.3/jquery.js"></script>-->
     <title>解析json数据</title>
 </head>
 
 <body>
     <p>从服务器获取数据</p>
+    <p>JSON 最常见的用法之一，是从 web 服务器上读取 JSON 数据（作为文件或作为 HttpRequest），将 JSON 数据转换为 JavaScript 对象，然后在网页中使用该数据。</p>
+    <p>由于 JSON 语法是 JavaScript 语法的子集，JavaScript 函数 eval() 可用于将 JSON 文本转换为 JavaScript 对象。 eval() 函数使用的是 JavaScript 编译器，可解析 JSON 文本，然后生成 JavaScript 对象。必须把文本包围在括号中，这样才能避免语法错误： var obj = eval ("(" + txt + ")");</p>
+    <P>因为同源策略我们需要Jsonp(JSON with Padding) 可以让网页从别的域名（网站）那获取资料，即跨域读取数据</P>
     <p id="div001"></p>
     <script src="js/js01.js"></script>
+    <!--<script>
+        $.getJSON("http://www.runoob.com/try/ajax/jsonp.php?jsoncallback=?", function(data) {
+
+            var html = '<ul>';
+            for (var i = 0; i < data.length; i++) {
+                html += '<li>' + data[i] + '</li>';
+            }
+            html += '</ul>';
+
+            $('#divCustomers').html(html);
+        });
+    </script>-->
+    <!--<script type="text/javascript" src="http://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction"></script>-->
 </body>
 
 </html>
